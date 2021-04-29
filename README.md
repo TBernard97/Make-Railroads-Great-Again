@@ -15,6 +15,8 @@ This repository provides scripts and tables that will hopefully help my fellow c
     - "c:\Program Files\PostgreSQL\13\bin\shp2pgsql.exe" -d -I -s 2236 -W "latin1" -g geom volusia_rr.shp volusia.railroads > create_railroads.sql
     - "c:\Program Files\PostgreSQL\13\bin\psql.exe" -U postgres -d spatial -f create_railroads.sql
     * NOTE: If an error related to DROP tables occurs when running the create_railroads.sql script, comment out that line. Cannot drop a table that doesn't exist.
+    * RECOMMENDED: It may be a good idea to reproject the railroad shape file to volusia county only: ogr2ogr -f "ESRI Shapefile" -s_srs EPSG:4269 -t_srs EPSG:2236 volusia_test_rails.shp tl_2020_us_rails.shp -clipdst 316848 1548127 864189 1858999
+    - The python script will work either way for calculations just a suggestion.
 4. Once imported try to query some data from volusia.railroads
 5. If successful try out some of the queries in the included SQL script. Try to understand what is going on.
 6. Once the process is understood run the update_railroad_distances.py script. Notice how the loop just recurses SQL statements to insert into parcel table over and over again.
