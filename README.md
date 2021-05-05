@@ -26,11 +26,13 @@ This repository provides scripts and tables that will hopefully help my fellow c
 It is a VERY good idea to sanity check your SQL queries with QGIS. The nearest track example image shows the use of QGIS to confirm that a parcel is actually close to a railroad track. Sanity check a shows how print statements can be used to ensure that data is being queried as expected. Sanity check b shows the number of rows that have a geometry. This is useful for making sure that each distance is calculated. Sanity check c shows that the number of rows are equal.
 
 # Data sample and full
-Finalized data added to parcel table is included along with a small 100 row sample.
+Finalized data added to parcel table is included along with a small 100 row sample. You can simply import the data_full.csv if you don't want to develop the column on your own.
 
 # To Do
 - Add a video (too lazy to do this right now)
 - Add images to README (I literally built a script called lazy-scan...)
+- ~~Regression~~ - DONE!
+- Effing reporting (Not fun...)
 
 # Contributing
 I like pull requests. Let's make railroad GIS great again.

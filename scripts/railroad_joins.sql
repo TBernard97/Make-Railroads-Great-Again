@@ -9,7 +9,7 @@ select luc, luc_desc, price, total_area from volusia.sales_analysis where luc = 
 -- Filter down to certain bedroom amount
 select luc, luc_desc, price, total_area, rmbed from volusia.sales_analysis where luc = '0100' and rmbed = 2;
 -- How many of each bedroom size?
-select rmbed, count(rmbed) from volusia.sales_analysis where rmbed is not null and luc = '0100' group by rmbed order by count(rmbed);
+select s.rmbed, count(s.rmbed) from volusia.sales_analysis s left join volusia.parcel p  on s.parid = p.parid where s.rmbed is not null and s.luc = '0100' and p.rrdistance < 401 group by s.rmbed order by count(rmbed);
 -- going to focus on top 3 bedroom counts for joins
 -- Join for 3 bedroom
 select price, total_area, volusia.sales_analysis.aprland, rrdistance, rmbed, volusia.sales_analysis.luc from volusia.sales_analysis inner join volusia.parcel on (volusia.sales_analysis.parid = volusia.parcel.parid) where rmbed = 3 and volusia.sales_analysis.luc = '0100' limit 100;
