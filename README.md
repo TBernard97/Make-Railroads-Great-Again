@@ -32,6 +32,7 @@ Finalized data added to parcel table is included along with a small 100 row samp
 - Add a video (too lazy to do this right now)
 - Add images to README (I literally built a script called lazy-scan...)
 - ~~Regression~~ - DONE!
+- ~~AWS export and Folium viewing~~ - DONE!
 - Effing reporting (Not fun...)
 
 # Contributing
