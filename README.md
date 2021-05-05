@@ -73,9 +73,9 @@ This is more of a result of sample size than anything. Because most houses in vo
 
 During regression for other class members attributes it was discovered that distance to a local crime seems to generate consistently high R-Squared metrics in linear regression and usually produces higher R-Squared metrics than other attributes in KNN.
 
-![](Screenshots/r_squared_crime_linear.png)
+![](Screenshots/r_squared_crime_linear.PNG)
 
-![](Screenshots/r_squared_crime_knn.png)
+![](Screenshots/r_squared_crime_knn.PNG)
 
 These attributes were added in addition to total_area, rrdistance, and aprland.
 
